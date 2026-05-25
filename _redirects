@@ -1,6 +1,0 @@
-# Netlify redirects (alternative to .htaccess if hosted on Netlify)
-/index      /          301
-/services   /services  200
-/about      /about     200
-/contact    /contact   200
-/*          /404.html  404
