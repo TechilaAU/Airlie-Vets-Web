@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Airlie Beach Veterinary Surgery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+:root{--sage:#7c4db8;--sagl:#b89aea;--sagp:#f0ebfa;--crm:#faf7f2;--ww:#fff9f4;--bark:#6b4f3a;--ch:#242424;--mid:#5c5c5c;--lt:#9a9a9a;--sand:#f0e8da;--ah:#2c3e6b}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--ww);color:var(--ch);overflow-x:hidden}
+.icon{display:inline-flex;align-items:center;justify-content:center}.icon svg{width:100%;height:100%}
+/* NAV */
+nav.main{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(250,247,242,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(124,77,184,.1);height:70px;display:flex;align-items:center;padding:0 5%;justify-content:space-between}
+.nbrand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.nlogo{width:40px;height:40px;background:var(--sage);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff}
+.nlogo .icon{width:20px;height:20px}
+.nbname{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--ch);display:block;line-height:1.2}
+.nbsub{font-size:10px;font-weight:300;color:var(--lt);letter-spacing:.14em;text-transform:uppercase;display:block}
+.nright{display:flex;align-items:center;gap:2px}
+.nlist{display:flex;align-items:center;gap:2px;list-style:none}
+.nitem{position:relative;list-style:none}
+.nlink{display:flex;align-items:center;gap:4px;font-size:13.5px;font-weight:400;color:var(--mid);text-decoration:none;padding:8px 12px;border-radius:8px;transition:color .18s,background .18s;background:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap}
+.nlink:hover{color:var(--sage);background:var(--sagp)}
+.chev{width:14px;height:14px;transition:transform .2s}
+.ndrop{position:relative}
+.ndmenu{position:absolute;top:calc(100% + 10px);left:0;background:#fff;border:1px solid rgba(124,77,184,.12);border-radius:14px;box-shadow:0 10px 40px rgba(0,0,0,.1);padding:8px;min-width:230px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s,transform .2s,visibility .2s;z-index:300;pointer-events:none}
+.ndrop:hover .ndmenu,.ndrop:focus-within .ndmenu{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+.ndrop:hover .chev{transform:rotate(180deg)}
+.ddsec{padding:4px 0}.ddsec+.ddsec{border-top:1px solid rgba(0,0,0,.05);margin-top:4px;padding-top:8px}
+.ddlbl{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--lt);padding:2px 10px 6px}
+.ddlnk{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--mid);text-decoration:none;padding:8px 10px;border-radius:8px;transition:color .15s,background .15s}
+.ddlnk:hover{color:var(--sage);background:var(--sagp)}.ddlnk .icon{width:15px;height:15px;color:var(--lt);flex-shrink:0}.ddlnk:hover .icon{color:var(--sage)}
+.nphone{font-size:13.5px;font-weight:500;color:var(--bark);text-decoration:none;display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:8px;transition:background .18s}.nphone:hover{background:var(--sand)}.nphone .icon{width:15px;height:15px}
+.ncta{display:inline-flex;align-items:center;gap:7px;background:var(--sage);color:#fff;font-size:13.5px;font-weight:500;padding:9px 18px;border-radius:100px;text-decoration:none;transition:background .2s,transform .2s,box-shadow .2s;margin-left:4px}.ncta:hover{background:var(--sagl);transform:translateY(-1px);box-shadow:0 6px 20px rgba(124,77,184,.25)}
+/* UTILS */
+.slbl{display:inline-block;font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);margin-bottom:14px}
+.stitle{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;line-height:1.18;color:var(--ch);margin-bottom:16px}
+.ssub{font-size:16px;font-weight:300;line-height:1.75;color:var(--mid);max-width:500px}
+.btnp{display:inline-flex;align-items:center;gap:8px;background:var(--sage);color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;padding:14px 26px;border-radius:100px;text-decoration:none;transition:background .2s,transform .2s,box-shadow .2s;border:none;cursor:pointer}.btnp:hover{background:var(--sagl);transform:translateY(-2px);box-shadow:0 8px 24px rgba(124,77,184,.28)}.btnp .icon{width:16px;height:16px}
+.btno{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--ch);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:400;padding:14px 26px;border-radius:100px;text-decoration:none;border:1.5px solid rgba(36,36,36,.18);transition:border-color .2s,color .2s}.btno:hover{border-color:var(--sage);color:var(--sage)}.btno .icon{width:16px;height:16px}
+.btnw{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--ah);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;padding:13px 24px;border-radius:100px;text-decoration:none;transition:transform .2s,box-shadow .2s}.btnw:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.18)}.btnw .icon{width:16px;height:16px}
+/* PAGE HEADER */
+.phdr{padding:140px 5% 80px;background:linear-gradient(135deg,var(--crm) 0%,var(--sagp) 100%);text-align:center}
+.phdr h1{font-family:'Playfair Display',serif;font-size:clamp(36px,4.5vw,58px);font-weight:700;line-height:1.12;color:var(--ch);margin-bottom:18px}
+.phdr p{font-size:17px;font-weight:300;color:var(--mid);line-height:1.7;max-width:540px;margin:0 auto}
+/* FOOTER */
+footer{background:var(--ch);padding:68px 5% 32px;color:rgba(255,255,255,.55)}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:56px}
+.flogo{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.flogoi{width:36px;height:36px;background:var(--sage);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff}.flogoi .icon{width:18px;height:18px}
+.fbrand{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:#fff}
+.fdesc{font-size:13.5px;line-height:1.75}
+.fhd{font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:18px}
+.flinks{list-style:none;display:flex;flex-direction:column;gap:11px}.flinks a{font-size:13.5px;color:rgba(255,255,255,.5);text-decoration:none;transition:color .18s}.flinks a:hover{color:var(--sagl)}
+.fbot{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px}
+/* RESPONSIVE */
+@media(max-width:800px){.nright{display:none}.fgrid{grid-template-columns:1fr 1fr}}
+
+.csec{padding:80px 5%;display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:start}
+.cinfocards{display:flex;flex-direction:column;gap:16px}
+.cicard{background:#fff;border-radius:18px;padding:22px;border:1px solid rgba(0,0,0,.05);display:flex;gap:14px;align-items:flex-start}
+.cicico{width:44px;height:44px;min-width:44px;background:var(--sagp);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--sage)}
+.cicico .icon{width:21px;height:21px}
+.cicard h3{font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:var(--lt);margin-bottom:6px}
+.cicard p{font-size:15px;font-weight:400;color:var(--ch);line-height:1.5}
+.cicard a{color:var(--sage);text-decoration:none;font-weight:500}.cicard a:hover{text-decoration:underline}
+.htable{width:100%;margin-top:4px}
+.htable tr{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(0,0,0,.04)}.htable tr:last-child{border:none}
+.htable td{font-size:14px;color:var(--mid)}.htable td:last-child{font-weight:400;color:var(--ch)}
+.htable .closed{color:var(--lt)!important}
+.cfwrap{background:#fff;border-radius:24px;padding:40px;box-shadow:0 4px 40px rgba(0,0,0,.06)}
+.cfwrap h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--ch);margin-bottom:6px}
+.cfwrap .sub{font-size:14px;font-weight:300;color:var(--mid);margin-bottom:32px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fg{margin-bottom:18px}
+.fg label{display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px}
+.fg input,.fg select,.fg textarea{width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none;transition:border-color .2s,background .2s;-webkit-appearance:none}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--sage);background:#fff}
+.fg textarea{resize:vertical;min-height:120px}
+.btsub{width:100%;background:var(--sage);color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;padding:15px;border:none;border-radius:100px;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s}
+.btsub:hover{background:var(--sagl);transform:translateY(-1px);box-shadow:0 6px 20px rgba(124,77,184,.25)}
+.fnote{font-size:12px;font-weight:300;color:var(--lt);text-align:center;margin-top:14px;line-height:1.5}
+.fsuccess{display:none;text-align:center;padding:32px 0}
+.fsuccess .fsico{width:64px;height:64px;background:var(--sagp);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--sage);margin:0 auto 16px}
+.fsuccess .fsico .icon{width:32px;height:32px}
+.fsuccess h3{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--ch);margin-bottom:8px}
+.fsuccess p{font-size:14.5px;font-weight:300;color:var(--mid)}
+.mapsec{padding:0 5% 80px}
+.mapbox{background:linear-gradient(140deg,var(--sagp) 0%,var(--sand) 100%);border-radius:24px;height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+.mapbox .icon{width:48px;height:48px;color:var(--sage)}
+.mapbox p{font-size:15px;font-weight:300;color:var(--mid)}
+.mapbox a{font-size:13.5px;font-weight:500;color:var(--sage);text-decoration:none}.mapbox a:hover{text-decoration:underline}
+@media(max-width:800px){.csec{grid-template-columns:1fr}.frow{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body><nav class="main">
+  <a href="index.html" class="nbrand">
+    <div class="nlogo"><span class="icon" style="width:20px;height:20px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="6" cy="7" rx="1.8" ry="2.5"/><ellipse cx="10.5" cy="5.2" rx="1.5" ry="2.1"/><ellipse cx="15" cy="5.5" rx="1.5" ry="2.1"/><ellipse cx="18.5" cy="8" rx="1.6" ry="2.2"/><path d="M12 22c-4 0-7-2.5-7-6 0-1.5.8-3 2-4l1.5-1.5c.8-.8 2-1.3 3.5-1.3s2.7.5 3.5 1.3L17 12c1.2 1 2 2.5 2 4 0 3.5-3 6-7 6z"/></svg></span></div>
+    <div><span class="nbname">Airlie Beach Vet</span><span class="nbsub">Veterinary Surgery</span></div>
+  </a>
+  <div class="nright">
+    <ul class="nlist">
+      <li class="nitem"><a href="index.html" class="nlink">Home</a></li>
+      <li class="nitem ndrop">
+        <button class="nlink">Services <span class="icon" style="width:14px;height:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+        <div class="ndmenu">
+          <div class="ddsec">
+            <div class="ddlbl">Healthcare</div>
+            <a href="services.html#healthcare" class="ddlnk"><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>Health Checks &amp; Diagnostics</a>
+            <a href="services.html#healthcare" class="ddlnk"><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="2" x2="22" y2="6"/><path d="M7 11l4-4 7 7-4 4z"/><path d="M5 13L2 22l9-3"/><line x1="11" y1="13" x2="14" y2="16"/></svg></span>Vaccinations &amp; Prevention</a>
+            <a href="services.html#healthcare" class="ddlnk"><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1"/><path d="M7 9H5M7 12H5M7 15H5M17 9h2M17 12h2M17 15h2M9 7V5M12 7V5M15 7V5M9 17v2M12 17v2M15 17v2"/></svg></span>Microchipping</a>
+          </div>
+          <div class="ddsec">
+            <div class="ddlbl">Surgical</div>
+            <a href="services.html#surgical" class="ddlnk"><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 3H9l-7 9 7 9h10a2 2 0 002-2V5a2 2 0 00-2-2z"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span>Desexing &amp; General Surgery</a>
+            <a href="services.html#surgical" class="ddlnk"><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 10c.7-.7 1-1.6 1-2.5a3.5 3.5 0 00-5-3.2A3.5 3.5 0 008 7.5c0 .9.3 1.8 1 2.5L6.5 12.5A3.5 3.5 0 007 19a3.5 3.5 0 004.5-1 3.5 3.5 0 004.5 1 3.5 3.5 0 00.5-6.5L17 10z"/></svg></span>Orthopaedic Surgery</a>
+            <a href="services.html#surgical" class="ddlnk"><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>Emergency Procedures</a>
+          </div>
+          <div class="ddsec">
+            <div class="ddlbl">Wellbeing</div>
+            <a href="services.html#wellbeing" class="ddlnk"><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3a3 3 0 00-3 3l-7 7-1 4 4-1 7-7a3 3 0 000-6z"/><path d="M5 18a1 1 0 100 2 1 1 0 000-2z"/><path d="M5 18c0-2.8 1.7-5 4-5"/></svg></span>Grooming &amp; Nail Clipping</a>
+            <a href="services.html#wellbeing" class="ddlnk"><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></span>Behavioural &amp; Nutrition Advice</a>
+          </div>
+        </div>
+      </li>
+      <li class="nitem"><a href="about.html" class="nlink">About Us</a></li>
+      <li class="nitem"><a href="contact.html" class="nlink">Contact</a></li>
+    </ul>
+    <a href="tel:0749461631" class="nphone"><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 014 6a2 2 0 012-2"/></svg></span> 07 4946 1631</a>
+    <a href="contact.html" class="ncta">Book Appointment</a>
+  </div>
+</nav>
+<style>
+.csec{padding:80px 5%;display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:start}
+.cinfocards{display:flex;flex-direction:column;gap:16px}
+.cicard{background:#fff;border-radius:18px;padding:22px;border:1px solid rgba(0,0,0,.05);display:flex;gap:14px;align-items:flex-start}
+.cicico{width:44px;height:44px;min-width:44px;background:var(--sagp);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--sage)}
+.cicico .icon{width:21px;height:21px}
+.cicard h3{font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:var(--lt);margin-bottom:6px}
+.cicard p{font-size:15px;font-weight:400;color:var(--ch);line-height:1.5}
+.cicard a{color:var(--sage);text-decoration:none;font-weight:500}.cicard a:hover{text-decoration:underline}
+.htable{width:100%;margin-top:4px}
+.htable tr{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(0,0,0,.04)}.htable tr:last-child{border:none}
+.htable td{font-size:14px;color:var(--mid)}.htable td:last-child{font-weight:400;color:var(--ch)}
+.htable .closed{color:var(--lt)!important}
+.cfwrap{background:#fff;border-radius:24px;padding:40px;box-shadow:0 4px 40px rgba(0,0,0,.06)}
+.cfwrap h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--ch);margin-bottom:6px}
+.cfwrap .sub{font-size:14px;font-weight:300;color:var(--mid);margin-bottom:32px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fg{margin-bottom:18px}
+.fg label{display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px}
+.fg input,.fg select,.fg textarea{width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none;transition:border-color .2s,background .2s;-webkit-appearance:none}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--sage);background:#fff}
+.fg textarea{resize:vertical;min-height:120px}
+.btsub{width:100%;background:var(--sage);color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;padding:15px;border:none;border-radius:100px;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s}
+.btsub:hover{background:var(--sagl);transform:translateY(-1px);box-shadow:0 6px 20px rgba(124,77,184,.25)}
+.fnote{font-size:12px;font-weight:300;color:var(--lt);text-align:center;margin-top:14px;line-height:1.5}
+.fsuccess{display:none;text-align:center;padding:32px 0}
+.fsuccess .fsico{width:64px;height:64px;background:var(--sagp);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--sage);margin:0 auto 16px}
+.fsuccess .fsico .icon{width:32px;height:32px}
+.fsuccess h3{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--ch);margin-bottom:8px}
+.fsuccess p{font-size:14.5px;font-weight:300;color:var(--mid)}
+.mapsec{padding:0 5% 80px}
+.mapbox{background:linear-gradient(140deg,var(--sagp) 0%,var(--sand) 100%);border-radius:24px;height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+.mapbox .icon{width:48px;height:48px;color:var(--sage)}
+.mapbox p{font-size:15px;font-weight:300;color:var(--mid)}
+.mapbox a{font-size:13.5px;font-weight:500;color:var(--sage);text-decoration:none}.mapbox a:hover{text-decoration:underline}
+@media(max-width:800px){.csec{grid-template-columns:1fr}.frow{grid-template-columns:1fr}}
+</style>
+
+<div class="phdr">
+  <div class="slbl">Get in Touch</div>
+  <h1>We're here to help<br>your pet thrive</h1>
+  <p>Call, visit or send us a message. We look forward to meeting your pet — now available 7 days with after-hours care.</p>
+</div>
+
+<div class="csec">
+  <div class="cinfocards">
+    <div class="cicard">
+      <div class="cicico"><span class="icon" style="width:21px;height:21px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 014 6a2 2 0 012-2"/></svg></span></div>
+      <div><h3>Phone</h3><p><a href="tel:0749461631">07 4946 1631</a></p><p style="font-size:13px;color:var(--lt);margin-top:4px">Best way to book an appointment</p></div>
+    </div>
+    <div class="cicard">
+      <div class="cicico"><span class="icon" style="width:21px;height:21px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-7-6.2-7-11a7 7 0 1114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="11" r="2.5"/></svg></span></div>
+      <div><h3>Address</h3><p>58 Shute Harbour Road<br>Cannonvale, QLD 4802</p></div>
+    </div>
+    <div class="cicard">
+      <div class="cicico"><span class="icon" style="width:21px;height:21px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg></span></div>
+      <div>
+        <h3>Opening Hours</h3>
+        <table class="htable">
+          <tr><td>Monday – Friday</td><td>8:30am – 5:30pm</td></tr>
+          <tr><td>Saturday</td><td>10:30am – 12:00pm</td></tr>
+          <tr><td>Sunday</td><td>After-hours service</td></tr>
+          <tr><td>After Hours</td><td>Available 7 days</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="cicard" style="background:rgba(44,62,107,.06);border-color:rgba(44,62,107,.12)">
+      <div class="cicico" style="background:rgba(44,62,107,.1);color:var(--ah)"><span class="icon" style="width:21px;height:21px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></span></div>
+      <div><h3>After-Hours &amp; Emergencies</h3><p style="font-size:14px;color:var(--mid)">We now offer 7-day and after-hours veterinary services. For urgent care outside regular hours, please call us directly.</p></div>
+    </div>
+  </div>
+
+  <div class="cfwrap">
+    <h2>Send us a message</h2>
+    <p class="sub">Fill in the form and we'll get back to you as soon as possible.</p>
+    <div id="formContent">
+      <div class="frow">
+        <div class="fg"><label>Your Name</label><input type="text" id="name" placeholder="Jane Smith"></div>
+        <div class="fg"><label>Phone Number</label><input type="tel" placeholder="07 xxxx xxxx"></div>
+      </div>
+      <div class="fg"><label>Email Address</label><input type="email" placeholder="you@example.com"></div>
+      <div class="frow">
+        <div class="fg"><label>Pet's Name</label><input type="text" placeholder="Buddy"></div>
+        <div class="fg"><label>Type of Pet</label><select><option value="">Select...</option><option>Dog</option><option>Cat</option><option>Bird</option><option>Guinea Pig</option><option>Snake</option><option>Rabbit</option><option>Other</option></select></div>
+      </div>
+      <div class="fg"><label>Reason for Visit</label><select><option value="">Select...</option><option>General Health Check</option><option>Vaccination</option><option>Dental Check</option><option>Grooming</option><option>Surgical Consultation</option><option>After-Hours / Emergency</option><option>Other</option></select></div>
+      <div class="fg"><label>Additional Information</label><textarea placeholder="Tell us anything else we should know about your pet or your visit..."></textarea></div>
+      <button class="btsub" onclick="submitForm()">Send Message</button>
+      <p class="fnote">We typically respond within one business day. For urgent matters or after-hours care, please call 07 4946 1631 directly.</p>
+    </div>
+    <div class="fsuccess" id="formSuccess">
+      <div class="fsico"><span class="icon" style="width:32px;height:32px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span></div>
+      <h3>Message received!</h3>
+      <p>Thank you — we'll be in touch shortly. For urgent care call <a href="tel:0749461631" style="color:var(--sage);font-weight:500">07 4946 1631</a>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="mapsec">
+  <div class="mapbox">
+    <span class="icon" style="width:48px;height:48px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-7-6.2-7-11a7 7 0 1114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="11" r="2.5"/></svg></span>
+    <p>58 Shute Harbour Road, Cannonvale QLD 4802</p>
+    <a href="https://maps.google.com/?q=58+Shute+Harbour+Road+Cannonvale+QLD" target="_blank">Open in Google Maps &rarr;</a>
+  </div>
+</div>
+
+<script>
+function submitForm(){
+  const name = document.getElementById('name').value;
+  if(!name.trim()){alert('Please enter your name.');return;}
+  document.getElementById('formContent').style.display='none';
+  document.getElementById('formSuccess').style.display='block';
+}
+</script><footer>
+  <div class="fgrid">
+    <div>
+      <div class="flogo"><div class="flogoi"><span class="icon" style="width:18px;height:18px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="6" cy="7" rx="1.8" ry="2.5"/><ellipse cx="10.5" cy="5.2" rx="1.5" ry="2.1"/><ellipse cx="15" cy="5.5" rx="1.5" ry="2.1"/><ellipse cx="18.5" cy="8" rx="1.6" ry="2.2"/><path d="M12 22c-4 0-7-2.5-7-6 0-1.5.8-3 2-4l1.5-1.5c.8-.8 2-1.3 3.5-1.3s2.7.5 3.5 1.3L17 12c1.2 1 2 2.5 2 4 0 3.5-3 6-7 6z"/></svg></span></div><span class="fbrand">Airlie Beach Vet</span></div>
+      <p class="fdesc">Modern, professional and affordable health care for your pets. Serving Cannonvale and the Whitsundays for over 30 years. Now open 7 days with after-hours service.</p>
+    </div>
+    <div><div class="fhd">Services</div><ul class="flinks"><li><a href="services.html#healthcare">Healthcare</a></li><li><a href="services.html#surgical">Surgical</a></li><li><a href="services.html#wellbeing">Wellbeing</a></li><li><a href="services.html#surgical">Emergency</a></li></ul></div>
+    <div><div class="fhd">Navigate</div><ul class="flinks"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><div class="fhd">Contact</div><ul class="flinks"><li><a href="tel:0749461631">07 4946 1631</a></li><li>58 Shute Harbour Rd<br>Cannonvale QLD 4802</li><li style="margin-top:10px;color:rgba(255,255,255,.3);font-size:12px;line-height:1.8">Mon–Fri 8:30am–5:30pm<br>Sat 10:30am–12pm<br>Sun &amp; After Hours: available</li></ul></div>
+  </div>
+  <div class="fbot"><span>&copy; 2026 Airlie Beach Veterinary Surgery. All rights reserved.</span><span>Cannonvale, Queensland</span></div>
+</footer>
+</body>
+</html>
