@@ -1,123 +1,82 @@
-# Airlie Beach Veterinary Surgery — Website
+# Airlie Beach Veterinary Surgery
 
-Static HTML website for Airlie Beach Veterinary Surgery, Cannonvale QLD.
+Static website for Airlie Beach Veterinary Surgery, Cannonvale QLD.
 
-## 📁 Project Structure
+## 📁 Structure
 
 ```
 airlie-beach-vet/
-├── index.html          # Homepage
-├── services.html       # Services page
-├── about.html          # About Us page
-├── contact.html        # Contact page
-├── 404.html            # Custom 404 error page
-├── images/             # Add all photos here (see naming guide below)
-│   └── .gitkeep
-├── css/                # Reserved for any extracted stylesheets
-│   └── .gitkeep
-├── js/                 # Reserved for any extracted scripts
-│   └── .gitkeep
-├── .htaccess           # Apache: clean URLs + 404 routing + caching
-├── _redirects          # Netlify: clean URLs + 404 routing
-└── README.md           # This file
+├── index.html              # Homepage  →  /
+├── 404.html                # Error page → auto-served for missing pages
+├── services/
+│   └── index.html          # Services   →  /services/
+├── about/
+│   └── index.html          # About Us   →  /about/
+├── contact/
+│   └── index.html          # Contact    →  /contact/
+├── images/                 # Drop photos here
+├── css/                    # Future stylesheets
+├── js/                     # Future scripts
+├── .htaccess               # Apache hosting config (ignored by GitHub Pages)
+└── README.md
 ```
 
-## 🚀 Deployment Options
+## 🚀 GitHub Pages deployment
 
-### Option A — GitHub Pages (free)
 1. Push this repo to GitHub
 2. Go to **Settings → Pages**
-3. Set source to `main` branch, root folder
-4. Your site is live at `https://yourusername.github.io/airlie-beach-vet/`
-5. For a custom domain (airliebeachvet.com.au), add it under **Custom domain**
+3. Source: **Deploy from branch** → `main` → `/ (root)`
+4. Click **Save** — site is live in ~60 seconds
+5. URL: `https://yourusername.github.io/airlie-beach-vet/`
 
-> **Note:** GitHub Pages doesn't support `.htaccess`. Clean URLs work differently —
-> GitHub Pages will serve `404.html` automatically for missing pages, but
-> `/services` won't resolve unless you rename files to folders (see below).
+**Custom domain** (airliebeachvet.com.au):
+- Add your domain under Settings → Pages → Custom domain
+- Point your DNS `A` records to GitHub's IPs:
+  ```
+  185.199.108.153
+  185.199.109.153
+  185.199.110.153
+  185.199.111.153
+  ```
+- Or add a `CNAME` record: `www → yourusername.github.io`
 
-**For true clean URLs on GitHub Pages**, rename files to folder/index pattern:
-```
-services.html  →  services/index.html
-about.html     →  about/index.html
-contact.html   →  contact/index.html
-contact.html   →  contact/index.html
-```
-Then `/services/` resolves cleanly. The `.htaccess` file is ignored by GitHub Pages.
+## 🎨 Brand colours
 
-### Option B — Traditional hosting (Hostinger, SiteGround, cPanel)
-1. Upload all files to `public_html/` via FTP or File Manager
-2. The `.htaccess` file handles clean URLs and 404 routing automatically
-3. Make sure `.htaccess` is visible in your FTP client (enable hidden files)
-
-### Option C — Netlify (free, recommended over GitHub Pages)
-1. Connect your GitHub repo in Netlify dashboard
-2. Build command: *(leave blank)*
-3. Publish directory: `/` (root)
-4. The `_redirects` file handles clean URLs and 404 routing automatically
-5. Add your custom domain in **Domain settings**
-
----
-
-## 🎨 Brand
-
-| Token | Value | Usage |
+| Token | Hex | Usage |
 |---|---|---|
-| Primary purple | `#b89aea` | Buttons, accents, icons |
+| Primary purple | `#b89aea` | Buttons, icons, accents |
 | Dark purple | `#7c4db8` | Hover states |
-| Light purple tint | `#f0ebfa` | Card backgrounds, badges |
+| Purple tint | `#f0ebfa` | Card backgrounds |
 | Cream | `#faf7f2` | Page backgrounds |
-| After-hours navy | `#2c3e6b` | After-hours banner |
-| Bark / warm brown | `#6b4f3a` | Stat badge |
+| After-hours navy | `#2c3e6b` | After-hours sections |
 
-**Fonts:** Playfair Display (headings) + DM Sans (body) — loaded from Google Fonts
+**Fonts:** Playfair Display + DM Sans (Google Fonts)
 
----
+## 📸 Adding images
 
-## 📸 Adding Images
+Place photos in `/images/` and reference them:
 
-Drop photos into the `/images/` folder. Recommended naming and sizes:
-
-| File name | Where used | Ideal width |
-|---|---|---|
-| `hero-bg.webp` | Homepage hero background | 1600px |
-| `clinic-exterior.webp` | About page, building shot | 1200px |
-| `team.webp` | About page, team photo | 900px |
-| `vet-[name].webp` | Individual team member | 600px |
-| `dog-consultation.webp` | Services hero | 1200px |
-| `logo.svg` | Nav + footer logo mark | SVG |
-| `favicon.png` | Browser tab icon | 32×32 + 180×180 |
-
-**Free compression tool:** [squoosh.app](https://squoosh.app) — convert to WebP and resize before uploading.
-
-Reference images in HTML like:
 ```html
-<img src="images/team.webp" alt="Airlie Beach Veterinary Surgery team" loading="lazy">
+<img src="/images/team.webp" alt="Our veterinary team" loading="lazy">
 ```
 
-Or as a CSS background:
-```css
-background-image: url('images/hero-bg.webp');
+From subpages (services, about, contact) use:
+```html
+<img src="../images/team.webp" alt="Our veterinary team" loading="lazy">
 ```
 
----
+**Recommended sizes:**
+| Image | Width | Format |
+|---|---|---|
+| Hero | 1600px | WebP |
+| Team / clinic | 900px | WebP |
+| Service cards | 600px | WebP |
+| Favicon | 32px + 180px | PNG |
 
-## 📞 Clinic Details
+Free compression: [squoosh.app](https://squoosh.app)
+
+## 📞 Clinic details
 
 - **Phone:** 07 4946 1631
 - **Address:** 58 Shute Harbour Road, Cannonvale QLD 4802
-- **Hours:** Mon–Fri 8:30am–5:30pm · Sat 10:30am–12pm · Sun & After Hours: available
-
----
-
-## 🛠 Moving to WordPress (future)
-
-When ready to move to WordPress + Elementor:
-1. Install WordPress on hosting
-2. Install **Astra** theme (free) + **Elementor** page builder (free)
-3. Use this HTML as the visual reference to recreate pages in Elementor
-4. Install **WPForms Lite** for the contact form
-5. All content is editable from the WordPress dashboard — no code needed
-
----
-
-*Built with plain HTML/CSS/JS — no frameworks, no build tools, no dependencies.*
+- **Hours:** Mon–Fri 8:30am–5:30pm · Sat 10:30am–12pm · Sun & After Hours available
