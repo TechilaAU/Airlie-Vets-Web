@@ -176,81 +176,124 @@ h1.hh em{font-style:italic;color:var(--sage)}
 
 
 
-.phdr{padding:140px 5% 72px;text-align:center;position:relative;overflow:hidden}
-.phdr-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
-.phdr-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,61,79,.82) 0%,rgba(42,138,138,.6) 100%);z-index:1}
-.phdr-content{position:relative;z-index:2}
-.phdr h1{font-family:'Playfair Display',serif;font-size:clamp(32px,4.5vw,54px);font-weight:700;line-height:1.12;color:#fff;margin-bottom:16px}
-.phdr p{font-size:16px;font-weight:300;color:rgba(255,255,255,.82);line-height:1.7;max-width:540px;margin:0 auto}
-.phdr .slbl{color:rgba(255,255,255,.6)}
-.breadcrumb{display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:18px;flex-wrap:wrap}
-.breadcrumb a{color:rgba(255,255,255,.6);text-decoration:none;font-size:12.5px;font-weight:300;transition:color .15s}.breadcrumb a:hover{color:white}
-.breadcrumb span{color:rgba(255,255,255,.35);font-size:12px}
-.prose-sec{padding:80px 5%;background:white}
-.prose-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
-.prose-img{border-radius:22px;overflow:hidden;aspect-ratio:4/3}
-.prose-img img{width:100%;height:100%;object-fit:cover}
-.prose p{font-size:15.5px;font-weight:300;color:var(--mid);line-height:1.8;margin-bottom:16px}
-.cta-band{background:var(--sage);padding:72px 5%;text-align:center;color:white}
-.cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,40px);font-weight:700;margin-bottom:12px}
-.cta-band p{font-size:15.5px;font-weight:300;opacity:.8;margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto}
-.cta-btns{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
-.btn-ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:white;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:400;padding:13px 24px;border-radius:100px;text-decoration:none;border:1.5px solid rgba(255,255,255,.4);transition:border-color .2s}.btn-ghost:hover{border-color:white}
-.team-intro{padding:80px 5%;background:white}
-.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:28px;margin-top:56px}
-.team-card{background:var(--crm);border-radius:24px;overflow:hidden;transition:transform .22s,box-shadow .22s}
-.team-card:hover{transform:translateY(-5px);box-shadow:0 16px 48px rgba(0,0,0,.1)}
-.team-card-img{height:280px;overflow:hidden;position:relative}
-.team-card-img img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .4s}
-.team-card:hover .team-card-img img{transform:scale(1.04)}
-.team-card-img .role-badge{position:absolute;bottom:14px;left:14px;background:rgba(10,61,79,.85);backdrop-filter:blur(8px);color:white;font-size:11px;font-weight:500;padding:5px 12px;border-radius:100px;letter-spacing:.04em}
-.team-card-body{padding:22px 24px}
-.team-card-body h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--ch);margin-bottom:4px}
-.team-card-body .role{font-size:11.5px;font-weight:500;color:var(--lilacd);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
-.team-card-body p{font-size:13.5px;font-weight:300;color:var(--mid);line-height:1.7}
-.team-pets{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
-.team-pet-tag{background:var(--lilacp);color:var(--lilacd);font-size:11px;font-weight:500;padding:3px 10px;border-radius:100px}
-.team-fun{padding:72px 5%;background:var(--crm)}
-.fun-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
-.fun-img{border-radius:18px;overflow:hidden;aspect-ratio:3/4}
-.fun-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}.fun-img:hover img{transform:scale(1.04)}
-.join-band{background:var(--lilacd);padding:72px 5%;text-align:center;color:white}
-.join-band h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,40px);font-weight:700;margin-bottom:12px}
-.join-band p{font-size:15.5px;font-weight:300;opacity:.8;margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto}
-.values-strip{background:var(--sagp);padding:56px 5%;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:24px}
+/* Page header */
+.phdr{padding:130px 5% 70px;text-align:center;position:relative;overflow:hidden;min-height:360px;display:flex;align-items:center;justify-content:center}
+.phdr-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;z-index:0}
+.phdr-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,61,79,.85) 0%,rgba(120,60,144,.55) 100%);z-index:1}
+.phdr-content{position:relative;z-index:2;width:100%}
+.phdr h1{font-family:'Playfair Display',serif;font-size:clamp(30px,4.5vw,52px);font-weight:700;line-height:1.12;color:#fff;margin-bottom:14px}
+.phdr p{font-size:16px;font-weight:300;color:rgba(255,255,255,.8);line-height:1.7;max-width:520px;margin:0 auto}
+.phdr .slbl{color:rgba(255,255,255,.55)}
+.breadcrumb{display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:16px}
+.breadcrumb a{color:rgba(255,255,255,.55);text-decoration:none;font-size:12.5px;font-weight:300;transition:color .15s}.breadcrumb a:hover{color:white}
+.breadcrumb span{color:rgba(255,255,255,.3);font-size:12px}
+
+/* Values strip */
+.values-strip{background:var(--sagp);padding:48px 5%;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .vs-item{display:flex;align-items:flex-start;gap:12px}
 .vs-ico{width:38px;height:38px;min-width:38px;background:white;border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--sage)}.vs-ico .icon{width:18px;height:18px}
 .vs-item h4{font-size:14px;font-weight:500;color:var(--ch);margin-bottom:3px}
 .vs-item p{font-size:13px;font-weight:300;color:var(--mid);line-height:1.6}
+
+/* Section headers */
+.team-sec{padding:72px 5%}
+.team-sec:nth-child(even){background:var(--crm)}
+.team-sec:nth-child(odd){background:white}
+.sec-label{font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--lilacd);margin-bottom:8px;display:block}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(24px,2.8vw,36px);font-weight:700;color:var(--ch);margin-bottom:40px;line-height:1.2}
+.sec-title em{font-style:italic;color:var(--sage)}
+.sec-divider{width:48px;height:3px;background:linear-gradient(90deg,var(--sage),var(--lilacd));border-radius:2px;margin:12px 0 36px}
+
+/* Team grid */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px}
+.team-grid.compact{grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px}
+
+/* Team card */
+.tc{background:white;border-radius:20px;overflow:hidden;border:1px solid rgba(0,0,0,.05);transition:transform .22s,box-shadow .22s,border-color .22s}
+.team-sec:nth-child(even) .tc{background:white}
+.team-sec:nth-child(odd) .tc{background:var(--crm)}
+.tc:hover{transform:translateY(-5px);box-shadow:0 16px 48px rgba(0,0,0,.09);border-color:rgba(42,138,138,.2)}
+
+/* Photo area */
+.tc-photo{height:300px;position:relative;overflow:hidden;background:var(--sagp)}
+.tc-photo img{width:100%;height:100%;object-fit:cover;object-position:center 15%;transition:transform .4s}
+.tc:hover .tc-photo img{transform:scale(1.04)}
+.tc-photo-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:linear-gradient(135deg,var(--sagp) 0%,var(--lilacp) 100%)}
+.tc-photo-placeholder .ph-icon{width:64px;height:64px;background:rgba(255,255,255,.6);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--sage)}
+.tc-photo-placeholder .ph-icon .icon{width:32px;height:32px}
+.tc-photo-placeholder p{font-size:12px;font-weight:400;color:var(--mid);letter-spacing:.04em}
+
+/* Role badge on photo */
+.tc-badge{position:absolute;bottom:12px;left:12px;font-size:10.5px;font-weight:500;letter-spacing:.06em;padding:5px 12px;border-radius:100px;backdrop-filter:blur(8px)}
+.tc-badge.vet{background:rgba(10,61,79,.82);color:white}
+.tc-badge.nurse{background:rgba(120,60,144,.82);color:white}
+.tc-badge.locum{background:rgba(42,138,138,.82);color:white}
+.tc-badge.manager{background:rgba(107,79,58,.82);color:white}
+
+/* Card body */
+.tc-body{padding:20px 22px 24px}
+.tc-name{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--ch);margin-bottom:3px}
+.tc-role{font-size:11px;font-weight:500;color:var(--lilacd);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+.tc-bio{font-size:13.5px;font-weight:300;color:var(--mid);line-height:1.72}
+.tc-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tc-tag{background:var(--lilacp);color:var(--lilacd);font-size:11px;font-weight:500;padding:3px 10px;border-radius:100px}
+.tc-tag.teal{background:var(--sagp);color:var(--sage)}
+
+/* Photo wanted card */
+.tc-wanted .tc-photo-placeholder{cursor:default}
+
+/* Fun gallery */
+.gallery-sec{padding:64px 5%;background:var(--crm)}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
+.gal-img{border-radius:16px;overflow:hidden}
+.gal-img.tall{aspect-ratio:3/4}
+.gal-img.wide{aspect-ratio:4/3}
+.gal-img.sq{aspect-ratio:1}
+.gal-img img{width:100%;height:100%;object-fit:cover;object-position:center 12%;transition:transform .4s}.gal-img:hover img{transform:scale(1.04)}
+
+/* CTA bands */
+.join-band{background:var(--lilacd);padding:64px 5%;text-align:center;color:white}
+.join-band h2{font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,38px);font-weight:700;margin-bottom:12px}
+.join-band p{font-size:15px;font-weight:300;opacity:.82;margin-bottom:30px;max-width:460px;margin-left:auto;margin-right:auto}
+.cta-band{background:var(--sage);padding:64px 5%;text-align:center;color:white}
+.cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,38px);font-weight:700;margin-bottom:12px}
+.cta-band p{font-size:15px;font-weight:300;opacity:.82;margin-bottom:30px;max-width:460px;margin-left:auto;margin-right:auto}
+.band-btns{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:white;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:400;padding:12px 22px;border-radius:100px;text-decoration:none;border:1.5px solid rgba(255,255,255,.4);transition:border-color .2s}.btn-ghost:hover{border-color:white}
+.btn-white{display:inline-flex;align-items:center;gap:8px;background:white;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:500;padding:12px 22px;border-radius:100px;text-decoration:none;transition:transform .2s}
+.btn-white:hover{transform:translateY(-2px)}
+
+@media(max-width:900px){.values-strip{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){
-  .prose-grid{grid-template-columns:1fr;gap:40px}
-  .fun-grid{grid-template-columns:1fr 1fr}
-  .team-grid{grid-template-columns:1fr 1fr}
-  .cta-btns{flex-direction:column;align-items:stretch}.cta-btns a{justify-content:center}
-  .phdr{padding:110px 5% 56px}
-  .values-strip{grid-template-columns:1fr 1fr}
+  .team-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+  .team-grid.compact{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .tc-photo{height:240px}
+  .band-btns{flex-direction:column;align-items:stretch}.band-btns a{justify-content:center}
+  .values-strip{grid-template-columns:1fr 1fr;gap:16px;padding:36px 5%}
 }
 @media(max-width:480px){
   .team-grid{grid-template-columns:1fr}
-  .fun-grid{grid-template-columns:1fr 1fr}
+  .team-grid.compact{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr 1fr}
 }
 
 </style>
-  <meta name="description" content="Meet the passionate vets, nurses and staff at Airlie Beach Veterinary Surgery. Caring for pets across Airlie Beach, Cannonvale, Jubilee Pocket and the Whitsundays for 30+ years.">
-  <meta name="keywords" content="vet team Airlie Beach, veterinarian Whitsundays, Dr Tess vet, vet nurses Cannonvale, animal care team Whitsundays, Airlie Beach vet staff">
+  <meta name="description" content="Meet the vets and nurses at Airlie Beach Veterinary Surgery — Dr Tess, Dr Nat, Dr Mark, Dr Macawley, and our nursing team. Caring for pets across the Whitsundays for 30+ years.">
+  <meta name="keywords" content="Dr Tess vet Airlie Beach, Dr Nat vet Whitsundays, vet team Airlie Beach, veterinary nurses Cannonvale, Airlie Beach Veterinary Surgery team, Katie vet nurse Whitsundays">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Airlie Beach Veterinary Surgery">
   <link rel="canonical" href="https://www.airliebeachveterinarysurgery.com.au/team/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.airliebeachveterinarysurgery.com.au/team/">
-  <meta property="og:title" content="Meet Our Team | Airlie Beach Veterinary Surgery | Whitsundays Vets">
-  <meta property="og:description" content="Meet the passionate vets, nurses and staff at Airlie Beach Veterinary Surgery. Caring for pets across Airlie Beach, Cannonvale, Jubilee Pocket and the Whitsundays for 30+ years.">
+  <meta property="og:title" content="Meet Our Team | Airlie Beach Veterinary Surgery">
+  <meta property="og:description" content="Meet Dr Tess, Dr Nat, Dr Mark, Dr Macawley and our nursing team — passionate animal lovers caring for pets across the Whitsundays.">
   <meta property="og:image" content="https://www.airliebeachveterinarysurgery.com.au/images/team-full.jpg">
   <meta property="og:site_name" content="Airlie Beach Veterinary Surgery">
   <meta property="og:locale" content="en_AU">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Meet Our Team | Airlie Beach Veterinary Surgery | Whitsundays Vets">
-  <meta name="twitter:description" content="Meet the passionate vets, nurses and staff at Airlie Beach Veterinary Surgery. Caring for pets across Airlie Beach, Cannonvale, Jubilee Pocket and the Whitsundays for 30+ years.">
+  <meta name="twitter:title" content="Meet Our Team | Airlie Beach Veterinary Surgery">
+  <meta name="twitter:description" content="Dr Tess, Dr Nat, Dr Mark, Dr Macawley and our nursing team — caring for Whitsundays pets.">
   <meta name="twitter:image" content="https://www.airliebeachveterinarysurgery.com.au/images/team-full.jpg">
   <meta name="geo.region" content="AU-QLD">
   <meta name="geo.placename" content="Airlie Beach, Cannonvale, Whitsundays">
@@ -267,7 +310,48 @@ h1.hh em{font-style:italic;color:var(--sage)}
     "name": "Airlie Beach Veterinary Surgery",
     "url": "https://www.airliebeachveterinarysurgery.com.au"
   },
-  "image": "https://www.airliebeachveterinarysurgery.com.au/images/dr-tess-dog.jpg",
+  "url": "https://www.airliebeachveterinarysurgery.com.au/team/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Dr Nat",
+  "jobTitle": "Veterinarian",
+  "worksFor": {
+    "@type": "VeterinaryCare",
+    "name": "Airlie Beach Veterinary Surgery",
+    "url": "https://www.airliebeachveterinarysurgery.com.au"
+  },
+  "url": "https://www.airliebeachveterinarysurgery.com.au/team/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Dr Mark",
+  "jobTitle": "Veterinarian",
+  "worksFor": {
+    "@type": "VeterinaryCare",
+    "name": "Airlie Beach Veterinary Surgery",
+    "url": "https://www.airliebeachveterinarysurgery.com.au"
+  },
+  "url": "https://www.airliebeachveterinarysurgery.com.au/team/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Dr Macawley",
+  "jobTitle": "Locum Veterinarian",
+  "worksFor": {
+    "@type": "VeterinaryCare",
+    "name": "Airlie Beach Veterinary Surgery",
+    "url": "https://www.airliebeachveterinarysurgery.com.au"
+  },
   "url": "https://www.airliebeachveterinarysurgery.com.au/team/"
 }
 </script>
@@ -465,7 +549,7 @@ h1.hh em{font-style:italic;color:var(--sage)}
   </div>
   <div class="hcard-area">
     <div class="hcard" style="padding:0;overflow:hidden;border-radius:22px">
-        <img src="../images/dog-stethoscope.webp" alt="Golden retriever at Airlie Beach Veterinary Surgery" style="width:100%;height:260px;object-fit:cover" loading="lazy">
+        <img src="../images/dog-stethoscope.webp" alt="Golden retriever at Airlie Beach Veterinary Surgery" style="width:100%;height:220px;object-fit:cover;object-position:center 30%" loading="lazy">
         <div style="padding:20px">
           <div class="hcardtitle">Caring for pets across the Whitsundays</div>
           <div class="hcardsub">Serving Airlie Beach, Cannonvale &amp; Jubilee Pocket for 30+ years.</div>
@@ -579,9 +663,9 @@ h1.hh em{font-style:italic;color:var(--sage)}
   <div class="slbl">What Pet Owners Say</div>
   <h2 class="stitle">Trusted by families<br>across the Whitsundays</h2>
   <div class="tgrid">
-    <div class="tcard"><div class="tstars"><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span></div><div class="tq">"</div><p class="ttxt">The team at Airlie Beach Veterinary Surgery have always gone above and beyond for our dogs. Gentle, caring and always so informative about what's happening with our pets.</p><div class="tauth"><div class="tav" style="overflow:hidden;padding:0"><img src="../images/dr-tess-dog.jpg" alt="Airlie Beach Veterinary Surgery team" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div><div><div class="tname">Sarah M.</div><div class="tpet">Owner of Bella &amp; Max</div></div></div></div>
-    <div class="tcard"><div class="tstars"><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span></div><div class="tq">"</div><p class="ttxt">We've been bringing our cat here for over 10 years. Absolutely wonderful staff who genuinely love animals. Wouldn't go anywhere else in the Whitsundays.</p><div class="tauth"><div class="tav" style="overflow:hidden;padding:0"><img src="../images/team-cavalier.jpg" alt="Airlie Beach Veterinary Surgery team" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div><div><div class="tname">David T.</div><div class="tpet">Owner of Whiskers</div></div></div></div>
-    <div class="tcard"><div class="tstars"><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span></div><div class="tq">"</div><p class="ttxt">Incredibly professional and affordable. They explained everything clearly and our puppy was so comfortable during the whole visit. Highly recommend!</p><div class="tauth"><div class="tav" style="overflow:hidden;padding:0"><img src="../images/team-lilac-scrubs.jpg" alt="Airlie Beach Veterinary Surgery team" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div><div><div class="tname">Julie K.</div><div class="tpet">Owner of Bruno</div></div></div></div>
+    <div class="tcard"><div class="tstars"><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span></div><div class="tq">"</div><p class="ttxt">The team at Airlie Beach Veterinary Surgery have always gone above and beyond for our dogs. Gentle, caring and always so informative about what's happening with our pets.</p><div class="tauth"><div class="tav" style="overflow:hidden;padding:0"><img src="../images/dr-tess-dog.jpg" alt="Airlie Beach Veterinary Surgery team member" style="width:100%;height:100%;object-fit:cover;object-position:center 20%" loading="lazy"></div><div><div class="tname">Sarah M.</div><div class="tpet">Owner of Bella &amp; Max</div></div></div></div>
+    <div class="tcard"><div class="tstars"><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span></div><div class="tq">"</div><p class="ttxt">We've been bringing our cat here for over 10 years. Absolutely wonderful staff who genuinely love animals. Wouldn't go anywhere else in the Whitsundays.</p><div class="tauth"><div class="tav" style="overflow:hidden;padding:0"><img src="../images/team-cavalier.jpg" alt="Airlie Beach Veterinary Surgery team member" style="width:100%;height:100%;object-fit:cover;object-position:center 15%" loading="lazy"></div><div><div class="tname">David T.</div><div class="tpet">Owner of Whiskers</div></div></div></div>
+    <div class="tcard"><div class="tstars"><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="icon" style="width:15px;height:15px"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span></div><div class="tq">"</div><p class="ttxt">Incredibly professional and affordable. They explained everything clearly and our puppy was so comfortable during the whole visit. Highly recommend!</p><div class="tauth"><div class="tav" style="overflow:hidden;padding:0"><img src="../images/team-lilac-scrubs.jpg" alt="Airlie Beach Veterinary Surgery team member" style="width:100%;height:100%;object-fit:cover;object-position:center 10%" loading="lazy"></div><div><div class="tname">Julie K.</div><div class="tpet">Owner of Bruno</div></div></div></div>
   </div>
 </section>
 
@@ -595,7 +679,7 @@ function showTab(id,btn){
 </script>
 
 <div class="phdr">
-  <img src="../images/team-full.jpg" alt="The Airlie Beach Veterinary Surgery team" class="phdr-img" loading="eager">
+  <img src="../images/team-full.jpg" alt="The Airlie Beach Veterinary Surgery team" class="phdr-img">
   <div class="phdr-overlay"></div>
   <div class="phdr-content">
     <nav class="breadcrumb" aria-label="breadcrumb">
@@ -603,97 +687,172 @@ function showTab(id,btn){
       <span>›</span>
       <a href="#">Our Team</a>
     </nav>
-    <div class="slbl">The People Behind the Care</div>
+    <div class="slbl" style="color:rgba(255,255,255,.55)">The People Behind the Care</div>
     <h1>Meet our <em style="font-style:italic">passionate</em><br>veterinary team</h1>
-    <p>Every member of our team is a genuine animal lover dedicated to the wellbeing of your pets.</p>
+    <p>Vets, nurses and support staff who share one goal — exceptional care for every pet in the Whitsundays.</p>
   </div>
 </div>
 
 <div class="values-strip">
-  <div class="vs-item"><div class="vs-ico"><span class="icon" style="width:18px;height:18px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></span></div><div><h4>Genuine animal lovers</h4><p>Every team member chose this career because they love animals — full stop.</p></div></div>
-  <div class="vs-item"><div class="vs-ico"><span class="icon" style="width:18px;height:18px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span></div><div><h4>30+ years experience</h4><p>Decades of combined expertise caring for pets across the Whitsundays.</p></div></div>
-  <div class="vs-item"><div class="vs-ico"><span class="icon" style="width:18px;height:18px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v7a6 6 0 006 6 6 6 0 006-6V3"/><path d="M11 3H7"/><path d="M17 3h-4"/><circle cx="18" cy="16" r="2"/><path d="M20 16v2a4 4 0 01-4 4H8a4 4 0 01-4-4v-2"/></svg></span></div><div><h4>Modern facilities</h4><p>Fully equipped clinic with digital X-ray, ultrasound and in-house pathology.</p></div></div>
-  <div class="vs-item"><div class="vs-ico"><span class="icon" style="width:18px;height:18px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg></span></div><div><h4>Open 7 days</h4><p>Including after-hours care, because pets don't keep business hours.</p></div></div>
+  <div class="vs-item"><div class="vs-ico"><span class="icon" style="width:18px;height:18px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v7a6 6 0 006 6 6 6 0 006-6V3"/><path d="M11 3H7"/><path d="M17 3h-4"/><circle cx="18" cy="16" r="2"/><path d="M20 16v2a4 4 0 01-4 4H8a4 4 0 01-4-4v-2"/></svg></span></div><div><h4>4 experienced vets</h4><p>Dr Tess, Dr Nat, Dr Mark &amp; Dr Macawley</p></div></div>
+  <div class="vs-item"><div class="vs-ico"><span class="icon" style="width:18px;height:18px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></span></div><div><h4>Genuine animal lovers</h4><p>Every team member chose this for love of animals</p></div></div>
+  <div class="vs-item"><div class="vs-ico"><span class="icon" style="width:18px;height:18px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span></div><div><h4>30+ years combined</h4><p>Decades of expertise in the Whitsundays</p></div></div>
+  <div class="vs-item"><div class="vs-ico"><span class="icon" style="width:18px;height:18px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg></span></div><div><h4>Open 7 days</h4><p>Including after-hours for urgent care</p></div></div>
 </div>
 
-<section class="team-intro">
-  <div class="slbl">Our Team</div>
-  <h2 class="stitle">Caring, skilled and<br>always in your corner</h2>
-  <p class="ssub">We're a close-knit team of vets, nurses and support staff who share one goal — exceptional care for every pet that comes through our doors.</p>
+<!-- VETS -->
+<section class="team-sec">
+  <span class="sec-label">Our Veterinarians</span>
+  <h2 class="sec-title">The vets who care<br>for your <em>beloved pets</em></h2>
+  <div class="sec-divider"></div>
   <div class="team-grid">
-    <div class="team-card">
-    <div class="team-card-img">
+    <div class="tc">
+    <div class="tc-photo">
       <img src="../images/dr-tess-dog.jpg" alt="Dr Tess, Veterinarian at Airlie Beach Veterinary Surgery" style="object-position:center 15%" loading="lazy">
-      <div class="role-badge">Lead Vet</div>
+      <span class="tc-badge vet">Veterinarian</span>
     </div>
-    <div class="team-card-body">
-      <h3>Dr Tess</h3>
-      <div class="role">Veterinarian</div>
-      <p>Dr Tess brings warmth, expertise and a genuine love of animals to every consultation. With years of experience across all aspects of veterinary medicine, she is passionate about providing the highest standard of care to the pets of Airlie Beach and the Whitsundays.</p>
-      <div class="team-pets"><span class="team-pet-tag">Dogs</span><span class="team-pet-tag">Cats</span><span class="team-pet-tag">All breeds</span></div>
-    </div>
-  </div>
-<div class="team-card">
-    <div class="team-card-img">
-      <img src="../images/team-lilac-scrubs.jpg" alt="The veterinary nursing team at Airlie Beach Veterinary Surgery in their lilac scrubs" style="object-position:center 10%" loading="lazy">
-      <div class="role-badge">Nursing Team</div>
-    </div>
-    <div class="team-card-body">
-      <h3>Our Vet Nurses</h3>
-      <div class="role">Veterinary Nursing Team</div>
-      <p>Our dedicated nursing team is the heart of the clinic. Passionate animal lovers every one of them, they provide exceptional care, compassion and support to every patient and owner who walks through our doors.</p>
-      <div class="team-pets"><span class="team-pet-tag">Dogs</span><span class="team-pet-tag">Cats</span><span class="team-pet-tag">Small animals</span></div>
+    <div class="tc-body">
+      <div class="tc-name">Dr Tess</div>
+      <div class="tc-role">Veterinarian</div>
+      <p class="tc-bio">Dr Tess brings warmth, expertise and a genuine love of animals to every consultation. With years of experience across all aspects of small animal medicine and surgery, she's passionate about building lasting relationships with the pets and families of Airlie Beach and the Whitsundays.</p>
+      <div class="tc-tags"><span class="tc-tag teal">Dogs & Cats</span><span class="tc-tag teal">Surgery</span><span class="tc-tag ">Medicine</span></div>
     </div>
   </div>
-<div class="team-card">
-    <div class="team-card-img">
-      <img src="../images/team-full.jpg" alt="The full Airlie Beach Veterinary Surgery team with their pets" loading="lazy">
-      <div class="role-badge">Full Team</div>
+<div class="tc">
+    <div class="tc-photo">
+      <div class="tc-photo-placeholder">
+        <div class="ph-icon"><span class="icon" style="width:32px;height:32px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span></div>
+        <p>Photo coming soon</p>
+      </div>
+      <span class="tc-badge vet">Veterinarian</span>
     </div>
-    <div class="team-card-body">
-      <h3>The Whole Team</h3>
-      <div class="role">Vets, Nurses & Support Staff</div>
-      <p>Together, our team of vets, nurses and support staff brings decades of combined experience caring for pets across the Whitsundays. We're proud to be part of this community and to have built lifelong relationships with so many local pet owners.</p>
-      <div class="team-pets"><span class="team-pet-tag">30+ years</span><span class="team-pet-tag">Whitsundays community</span><span class="team-pet-tag">All pets welcome</span></div>
+    <div class="tc-body">
+      <div class="tc-name">Dr Nat</div>
+      <div class="tc-role">Veterinarian</div>
+      <p class="tc-bio">Dr Nat is a compassionate and skilled vet with a keen interest in preventive care and client education. She believes that an informed pet owner is the best partner in keeping animals healthy and happy.</p>
+      <div class="tc-tags"><span class="tc-tag teal">Preventive Care</span><span class="tc-tag teal">Dogs & Cats</span><span class="tc-tag ">Education</span></div>
+    </div>
+  </div>
+<div class="tc">
+    <div class="tc-photo">
+      <div class="tc-photo-placeholder">
+        <div class="ph-icon"><span class="icon" style="width:32px;height:32px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span></div>
+        <p>Photo coming soon</p>
+      </div>
+      <span class="tc-badge vet">Veterinarian</span>
+    </div>
+    <div class="tc-body">
+      <div class="tc-name">Dr Mark</div>
+      <div class="tc-role">Veterinarian</div>
+      <p class="tc-bio">Dr Mark brings a calm, methodical approach to every case. His thorough diagnostic skills and genuine care for each patient make him a valued member of the Airlie Beach Veterinary Surgery team.</p>
+      <div class="tc-tags"><span class="tc-tag teal">Diagnostics</span><span class="tc-tag teal">Surgery</span><span class="tc-tag ">All Species</span></div>
+    </div>
+  </div>
+<div class="tc">
+    <div class="tc-photo">
+      <div class="tc-photo-placeholder">
+        <div class="ph-icon"><span class="icon" style="width:32px;height:32px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span></div>
+        <p>Photo coming soon</p>
+      </div>
+      <span class="tc-badge locum">Locum Veterinarian</span>
+    </div>
+    <div class="tc-body">
+      <div class="tc-name">Dr Macawley</div>
+      <div class="tc-role">Locum Veterinarian</div>
+      <p class="tc-bio">Dr Macawley joins us as a locum vet, bringing fresh perspectives and broad experience from across Australia. A skilled and adaptable clinician, he fits seamlessly into our team and our community.</p>
+      <div class="tc-tags"><span class="tc-tag ">Locum</span><span class="tc-tag teal">Dogs & Cats</span><span class="tc-tag teal">General Practice</span></div>
     </div>
   </div>
   </div>
 </section>
 
-<section class="team-fun">
-  <div class="slbl">Life at the Clinic</div>
-  <h2 class="stitle">We love what we do —<br>and it <em style="font-style:italic;color:var(--lilacd)">shows</em></h2>
-  <p class="ssub">A little glimpse into the team and the joy they bring to work every single day.</p>
-  <div class="fun-grid">
-    <div class="fun-img">
-      <img src="../images/team-easter.jpg" alt="The team celebrating Easter with puppies" loading="lazy">
+<!-- NURSES -->
+<section class="team-sec">
+  <span class="sec-label">Veterinary Nursing Team</span>
+  <h2 class="sec-title">The heart of<br>our <em>clinic</em></h2>
+  <div class="sec-divider"></div>
+  <p style="font-size:15.5px;font-weight:300;color:var(--mid);line-height:1.75;max-width:580px;margin-bottom:40px">Our nurses and practice manager are the backbone of Airlie Beach Veterinary Surgery. From the moment you walk in to the moment you leave, they ensure every patient receives the warmth, care and attention they deserve.</p>
+  <div class="team-grid compact">
+    <div class="tc">
+    <div class="tc-photo">
+      <img src="../images/team-lilac-scrubs.jpg" alt="Katie, Practice Manager at Airlie Beach Veterinary Surgery" style="object-position:center 8%" loading="lazy">
+      <span class="tc-badge manager">Practice Manager</span>
     </div>
-    <div class="fun-img">
-      <img src="../images/team-puppies.webp" alt="Vet nurses holding puppies at the clinic" loading="lazy">
+    <div class="tc-body">
+      <div class="tc-name">Katie</div>
+      <div class="tc-role">Practice Manager</div>
+      <p class="tc-bio">Katie keeps the whole clinic running smoothly. As Practice Manager, she's the backbone of Airlie Beach Veterinary Surgery — ensuring every client has a wonderful experience and every team member has what they need to do their best work.</p>
+      <div class="tc-tags"><span class="tc-tag ">Practice Manager</span><span class="tc-tag teal">Client Care</span><span class="tc-tag teal">Operations</span></div>
     </div>
-    <div class="fun-img">
-      <img src="../images/team-cavalier.jpg" alt="Team member holding a Cavalier King Charles Spaniel" loading="lazy">
+  </div>
+<div class="tc">
+    <div class="tc-photo">
+      <div class="tc-photo-placeholder">
+        <div class="ph-icon"><span class="icon" style="width:32px;height:32px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span></div>
+        <p>Photo coming soon</p>
+      </div>
+      <span class="tc-badge nurse">Veterinary Nurse</span>
+    </div>
+    <div class="tc-body">
+      <div class="tc-name">Grace</div>
+      <div class="tc-role">Veterinary Nurse</div>
+      <p class="tc-bio">Grace is a dedicated and gentle nurse who goes above and beyond for every patient. Her calm presence puts even the most anxious animals at ease, and her passion for animal welfare shines through in everything she does.</p>
+      <div class="tc-tags"><span class="tc-tag teal">Patient Care</span><span class="tc-tag ">Anaesthesia</span><span class="tc-tag ">Animal Welfare</span></div>
+    </div>
+  </div>
+<div class="tc">
+    <div class="tc-photo">
+      <div class="tc-photo-placeholder">
+        <div class="ph-icon"><span class="icon" style="width:32px;height:32px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span></div>
+        <p>Photo coming soon</p>
+      </div>
+      <span class="tc-badge nurse">Veterinary Nurse</span>
+    </div>
+    <div class="tc-body">
+      <div class="tc-name">Karly</div>
+      <div class="tc-role">Veterinary Nurse</div>
+      <p class="tc-bio">Karly's infectious enthusiasm and genuine love of animals make her a favourite with both pets and their owners. She brings energy, care and skill to every shift and is always ready to go the extra mile.</p>
+      <div class="tc-tags"><span class="tc-tag teal">Patient Care</span><span class="tc-tag ">Surgery Support</span><span class="tc-tag ">Client Relations</span></div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-sec">
+  <span class="sec-label">Life at the Clinic</span>
+  <h2 class="sec-title" style="font-family:'Playfair Display',serif;font-size:clamp(24px,2.8vw,36px);font-weight:700;color:var(--ch);margin-bottom:8px">We love what we do —<br>and it <em style="font-style:italic;color:var(--lilacd)">shows</em></h2>
+  <p style="font-size:15px;font-weight:300;color:var(--mid);max-width:480px;margin-bottom:0">A few glimpses into the joy our team brings to work every single day.</p>
+  <div class="gallery-grid">
+    <div class="gal-img tall">
+      <img src="../images/team-easter.jpg" alt="The team celebrating Easter at Airlie Beach Veterinary Surgery" loading="lazy" style="object-position:center 8%">
+    </div>
+    <div class="gal-img tall">
+      <img src="../images/team-cavalier.jpg" alt="Team member with a Cavalier King Charles Spaniel patient" loading="lazy" style="object-position:center 12%">
+    </div>
+    <div class="gal-img tall">
+      <img src="../images/team-lilac-scrubs.jpg" alt="The nursing team in their lilac scrubs" loading="lazy" style="object-position:center 8%">
     </div>
   </div>
 </section>
 
+<!-- JOIN -->
 <div class="join-band">
-  <h2>Want to join our team?</h2>
-  <p>We're always interested in hearing from passionate vets and nurses who share our love of animals and community.</p>
-  <div class="cta-btns">
-    <a href="mailto:hello@airliebeachveterinarysurgery.com.au" style="display:inline-flex;align-items:center;gap:8px;background:white;color:var(--lilacd);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;padding:13px 24px;border-radius:100px;text-decoration:none">
-      <span class="icon" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span> Get in Touch
-    </a>
-    <a href="../contact/" class="btn-ghost">Book an Appointment <span class="icon" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></a>
+  <h2>Interested in joining our team?</h2>
+  <p>We're always keen to hear from passionate vets and nurses who share our love of animals and community.</p>
+  <div class="band-btns">
+    <a href="mailto:hello@airliebeachveterinarysurgery.com.au" class="btn-white" style="color:var(--lilacd)"><span class="icon" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span> Send us an email</a>
+    <a href="../contact/" class="btn-ghost">Get in Touch <span class="icon" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></a>
   </div>
 </div>
 
+<!-- BOOK CTA -->
 <div class="cta-band">
-  <h2>Book an appointment today</h2>
-  <p>Our team is ready to care for your pet. Call us or book online — open 7 days.</p>
-  <div class="cta-btns">
+  <h2>Ready to book an appointment?</h2>
+  <p>Our team is here for your pet — 7 days a week, with after-hours care available.</p>
+  <div class="band-btns">
     <a href="tel:0749461631" class="btnp"><span class="icon" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 014 6a2 2 0 012-2"/></svg></span> 07 4946 1631</a>
-    <a href="../contact/" class="btn-ghost">Contact Us <span class="icon" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></a>
+    <a href="../contact/" class="btn-ghost">Book Online <span class="icon" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></a>
   </div>
 </div>
 <footer>
@@ -702,7 +861,7 @@ function showTab(id,btn){
       <div class="flogo"><img src="../images/logo-icon.png" alt="Airlie Beach Veterinary Surgery" style="width:38px;height:38px;object-fit:contain;flex-shrink:0"><span class="fbrand">Airlie Beach Veterinary Surgery</span></div>
       <p class="fdesc">Modern, professional and affordable health care for your pets. Serving Cannonvale and the Whitsundays for over 30 years. Now open 7 days with after-hours service.</p>
     </div>
-    <div><div class="fhd">Services</div><ul class="flinks"><li><a href="services/#healthcare">Healthcare</a></li><li><a href="services/#surgical">Surgical</a></li><li><a href="services/#wellbeing">Wellbeing</a></li><li><a href="services/#surgical">Emergency</a></li></ul></div>
+    <div><div class="fhd">Services</div><ul class="flinks"><li><a href="../services/#healthcare">Healthcare</a></li><li><a href="../services/#surgical">Surgical</a></li><li><a href="../services/#wellbeing">Wellbeing</a></li><li><a href="../services/#surgical">Emergency</a></li></ul></div>
     <div><div class="fhd">Navigate</div><ul class="flinks"><li><a href="../">Home</a></li><li><a href="../about/">About Us</a></li><li><a href="../services/">Services</a></li><li><a href="../contact/">Contact</a></li></ul></div>
     <div><div class="fhd">Contact</div><ul class="flinks"><li><a href="tel:0749461631">07 4946 1631</a></li><li>58 Shute Harbour Rd<br>Cannonvale QLD 4802</li><li style="margin-top:10px;color:rgba(255,255,255,.3);font-size:12px;line-height:1.8">Mon–Fri 8:30am–5:30pm<br>Sat 10:30am–12pm<br>Sun &amp; After Hours: available</li></ul></div>
   </div>
