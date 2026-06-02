@@ -7,13 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
-:root{--sage:#7c4db8;--sagl:#b89aea;--sagp:#f0ebfa;--crm:#faf7f2;--ww:#fff9f4;--bark:#6b4f3a;--ch:#242424;--mid:#5c5c5c;--lt:#9a9a9a;--sand:#f0e8da;--ah:#2c3e6b}
+:root{--sage:#2a8a8a;--sagl:#5ab5b5;--sagp:#e8f5f5;--crm:#faf7f2;--ww:#fff9f4;--bark:#0a3d4f;--ch:#242424;--mid:#5c5c5c;--lt:#9a9a9a;--sand:#f0e8da;--ah:#0a3d4f}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;background:var(--ww);color:var(--ch);overflow-x:hidden}
 .icon{display:inline-flex;align-items:center;justify-content:center}.icon svg{width:100%;height:100%}
 /* NAV */
-nav.main{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(250,247,242,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(124,77,184,.1);height:70px;display:flex;align-items:center;padding:0 5%;justify-content:space-between}
+nav.main{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(250,247,242,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(42,138,138,.1);height:70px;display:flex;align-items:center;padding:0 5%;justify-content:space-between}
 .nbrand{display:flex;align-items:center;gap:11px;text-decoration:none}
 .nlogo{width:40px;height:40px;background:var(--sage);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff}
 .nlogo .icon{width:20px;height:20px}
@@ -26,7 +26,7 @@ nav.main{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(250,247
 .nlink:hover{color:var(--sage);background:var(--sagp)}
 .chev{width:14px;height:14px;transition:transform .2s}
 .ndrop{position:relative}
-.ndmenu{position:absolute;top:calc(100% + 10px);left:0;background:#fff;border:1px solid rgba(124,77,184,.12);border-radius:14px;box-shadow:0 10px 40px rgba(0,0,0,.1);padding:8px;min-width:230px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s,transform .2s,visibility .2s;z-index:300;pointer-events:none}
+.ndmenu{position:absolute;top:calc(100% + 10px);left:0;background:#fff;border:1px solid rgba(42,138,138,.12);border-radius:14px;box-shadow:0 10px 40px rgba(0,0,0,.1);padding:8px;min-width:230px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s,transform .2s,visibility .2s;z-index:300;pointer-events:none}
 .ndrop:hover .ndmenu,.ndrop:focus-within .ndmenu{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
 .ndrop:hover .chev{transform:rotate(180deg)}
 .ddsec{padding:4px 0}.ddsec+.ddsec{border-top:1px solid rgba(0,0,0,.05);margin-top:4px;padding-top:8px}
@@ -34,12 +34,12 @@ nav.main{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(250,247
 .ddlnk{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--mid);text-decoration:none;padding:8px 10px;border-radius:8px;transition:color .15s,background .15s}
 .ddlnk:hover{color:var(--sage);background:var(--sagp)}.ddlnk .icon{width:15px;height:15px;color:var(--lt);flex-shrink:0}.ddlnk:hover .icon{color:var(--sage)}
 .nphone{font-size:13.5px;font-weight:500;color:var(--bark);text-decoration:none;display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:8px;transition:background .18s}.nphone:hover{background:var(--sand)}.nphone .icon{width:15px;height:15px}
-.ncta{display:inline-flex;align-items:center;gap:7px;background:var(--sage);color:#fff;font-size:13.5px;font-weight:500;padding:9px 18px;border-radius:100px;text-decoration:none;transition:background .2s,transform .2s,box-shadow .2s;margin-left:4px}.ncta:hover{background:var(--sagl);transform:translateY(-1px);box-shadow:0 6px 20px rgba(124,77,184,.25)}
+.ncta{display:inline-flex;align-items:center;gap:7px;background:var(--sage);color:#fff;font-size:13.5px;font-weight:500;padding:9px 18px;border-radius:100px;text-decoration:none;transition:background .2s,transform .2s,box-shadow .2s;margin-left:4px}.ncta:hover{background:var(--sagl);transform:translateY(-1px);box-shadow:0 6px 20px rgba(42,138,138,.25)}
 /* UTILS */
 .slbl{display:inline-block;font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);margin-bottom:14px}
 .stitle{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;line-height:1.18;color:var(--ch);margin-bottom:16px}
 .ssub{font-size:16px;font-weight:300;line-height:1.75;color:var(--mid);max-width:500px}
-.btnp{display:inline-flex;align-items:center;gap:8px;background:var(--sage);color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;padding:14px 26px;border-radius:100px;text-decoration:none;transition:background .2s,transform .2s,box-shadow .2s;border:none;cursor:pointer}.btnp:hover{background:var(--sagl);transform:translateY(-2px);box-shadow:0 8px 24px rgba(124,77,184,.28)}.btnp .icon{width:16px;height:16px}
+.btnp{display:inline-flex;align-items:center;gap:8px;background:var(--sage);color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;padding:14px 26px;border-radius:100px;text-decoration:none;transition:background .2s,transform .2s,box-shadow .2s;border:none;cursor:pointer}.btnp:hover{background:var(--sagl);transform:translateY(-2px);box-shadow:0 8px 24px rgba(42,138,138,.28)}.btnp .icon{width:16px;height:16px}
 .btno{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--ch);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:400;padding:14px 26px;border-radius:100px;text-decoration:none;border:1.5px solid rgba(36,36,36,.18);transition:border-color .2s,color .2s}.btno:hover{border-color:var(--sage);color:var(--sage)}.btno .icon{width:16px;height:16px}
 .btnw{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--ah);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;padding:13px 24px;border-radius:100px;text-decoration:none;transition:transform .2s,box-shadow .2s}.btnw:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.18)}.btnw .icon{width:16px;height:16px}
 /* PAGE HEADER */
@@ -81,7 +81,7 @@ footer{background:var(--ch);padding:68px 5% 32px;color:rgba(255,255,255,.55)}
 .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--sage);background:#fff}
 .fg textarea{resize:vertical;min-height:120px}
 .btsub{width:100%;background:var(--sage);color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;padding:15px;border:none;border-radius:100px;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s}
-.btsub:hover{background:var(--sagl);transform:translateY(-1px);box-shadow:0 6px 20px rgba(124,77,184,.25)}
+.btsub:hover{background:var(--sagl);transform:translateY(-1px);box-shadow:0 6px 20px rgba(42,138,138,.25)}
 .fnote{font-size:12px;font-weight:300;color:var(--lt);text-align:center;margin-top:14px;line-height:1.5}
 .fsuccess{display:none;text-align:center;padding:32px 0}
 .fsuccess .fsico{width:64px;height:64px;background:var(--sagp);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--sage);margin:0 auto 16px}
@@ -157,7 +157,7 @@ footer{background:var(--ch);padding:68px 5% 32px;color:rgba(255,255,255,.55)}
 .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--sage);background:#fff}
 .fg textarea{resize:vertical;min-height:120px}
 .btsub{width:100%;background:var(--sage);color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;padding:15px;border:none;border-radius:100px;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s}
-.btsub:hover{background:var(--sagl);transform:translateY(-1px);box-shadow:0 6px 20px rgba(124,77,184,.25)}
+.btsub:hover{background:var(--sagl);transform:translateY(-1px);box-shadow:0 6px 20px rgba(42,138,138,.25)}
 .fnote{font-size:12px;font-weight:300;color:var(--lt);text-align:center;margin-top:14px;line-height:1.5}
 .fsuccess{display:none;text-align:center;padding:32px 0}
 .fsuccess .fsico{width:64px;height:64px;background:var(--sagp);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--sage);margin:0 auto 16px}
@@ -200,8 +200,8 @@ footer{background:var(--ch);padding:68px 5% 32px;color:rgba(255,255,255,.55)}
         </table>
       </div>
     </div>
-    <div class="cicard" style="background:rgba(44,62,107,.06);border-color:rgba(44,62,107,.12)">
-      <div class="cicico" style="background:rgba(44,62,107,.1);color:var(--ah)"><span class="icon" style="width:21px;height:21px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></span></div>
+    <div class="cicard" style="background:rgba(10,61,79,.06);border-color:rgba(10,61,79,.12)">
+      <div class="cicico" style="background:rgba(10,61,79,.1);color:var(--ah)"><span class="icon" style="width:21px;height:21px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></span></div>
       <div><h3>After-Hours &amp; Emergencies</h3><p style="font-size:14px;color:var(--mid)">We now offer 7-day and after-hours veterinary services. For urgent care outside regular hours, please call us directly.</p></div>
     </div>
   </div>

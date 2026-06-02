@@ -1,82 +1,62 @@
 # Airlie Beach Veterinary Surgery
 
-Static website for Airlie Beach Veterinary Surgery, Cannonvale QLD.
+Static website — Airlie Beach Veterinary Surgery, Cannonvale QLD.
 
-## 📁 Structure
-
-```
-airlie-beach-vet/
-├── index.html              # Homepage  →  /
-├── 404.html                # Error page → auto-served for missing pages
-├── services/
-│   └── index.html          # Services   →  /services/
-├── about/
-│   └── index.html          # About Us   →  /about/
-├── contact/
-│   └── index.html          # Contact    →  /contact/
-├── images/                 # Drop photos here
-├── css/                    # Future stylesheets
-├── js/                     # Future scripts
-├── .htaccess               # Apache hosting config (ignored by GitHub Pages)
-└── README.md
-```
-
-## 🚀 GitHub Pages deployment
-
-1. Push this repo to GitHub
-2. Go to **Settings → Pages**
-3. Source: **Deploy from branch** → `main` → `/ (root)`
-4. Click **Save** — site is live in ~60 seconds
-5. URL: `https://yourusername.github.io/airlie-beach-vet/`
-
-**Custom domain** (airliebeachvet.com.au):
-- Add your domain under Settings → Pages → Custom domain
-- Point your DNS `A` records to GitHub's IPs:
-  ```
-  185.199.108.153
-  185.199.109.153
-  185.199.110.153
-  185.199.111.153
-  ```
-- Or add a `CNAME` record: `www → yourusername.github.io`
-
-## 🎨 Brand colours
+## Colours (matched to logo)
 
 | Token | Hex | Usage |
 |---|---|---|
-| Primary purple | `#b89aea` | Buttons, icons, accents |
-| Dark purple | `#7c4db8` | Hover states |
-| Purple tint | `#f0ebfa` | Card backgrounds |
-| Cream | `#faf7f2` | Page backgrounds |
-| After-hours navy | `#2c3e6b` | After-hours sections |
+| Primary teal | `#2a8a8a` | Buttons, nav active, borders |
+| Mid teal | `#5ab5b5` | Hover states, icons |
+| Pale teal | `#e8f5f5` | Card backgrounds, badges |
+| Dark teal | `#0a3d4f` | Hero section, after-hours band |
+| Orchid purple | `#c4a8d4` | Accent (matches logo orchid) |
+| Sand | `#d4c4a0` | Warm neutral backgrounds |
+| Deep navy | `#1e2d4b` | Heading text |
 
-**Fonts:** Playfair Display + DM Sans (Google Fonts)
+## Structure
 
-## 📸 Adding images
-
-Place photos in `/images/` and reference them:
-
-```html
-<img src="/images/team.webp" alt="Our veterinary team" loading="lazy">
+```
+airlie-beach-vet/
+├── index.html              →  /
+├── 404.html                →  auto-served for missing pages
+├── services/index.html     →  /services/
+├── about/index.html        →  /about/
+├── contact/index.html      →  /contact/
+├── images/                 →  drop photos here
+├── .htaccess               →  Apache hosting config
+└── README.md
 ```
 
-From subpages (services, about, contact) use:
-```html
-<img src="../images/team.webp" alt="Our veterinary team" loading="lazy">
+## GitHub Pages deployment
+
+1. Push repo to GitHub
+2. Settings → Pages → Deploy from branch → main → / (root)
+3. Live at `https://yourusername.github.io/airlie-beach-vet/`
+
+For custom domain: add domain in Settings → Pages → Custom domain,
+then point DNS A records to GitHub's IPs:
+```
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
 ```
 
-**Recommended sizes:**
-| Image | Width | Format |
-|---|---|---|
-| Hero | 1600px | WebP |
-| Team / clinic | 900px | WebP |
-| Service cards | 600px | WebP |
-| Favicon | 32px + 180px | PNG |
+## Adding images
 
-Free compression: [squoosh.app](https://squoosh.app)
+Place photos in `/images/`. From root pages:
+```html
+<img src="images/clinic.webp" alt="Airlie Beach Veterinary Surgery" loading="lazy">
+```
+From subpages (services/, about/, contact/):
+```html
+<img src="../images/clinic.webp" alt="..." loading="lazy">
+```
 
-## 📞 Clinic details
+Recommended sizes: Hero 1600px · Team/clinic 900px · Cards 600px · All WebP format.
+Free compression: squoosh.app
 
-- **Phone:** 07 4946 1631
-- **Address:** 58 Shute Harbour Road, Cannonvale QLD 4802
-- **Hours:** Mon–Fri 8:30am–5:30pm · Sat 10:30am–12pm · Sun & After Hours available
+## Logo files
+- `AirlieBeachVets_Logo.png` — full logo with text
+- `AirlieBeachVets_No_text.png` — icon only (for favicon, app icon)
