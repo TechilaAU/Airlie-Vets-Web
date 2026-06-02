@@ -155,19 +155,51 @@ function closeDrawer(){var d=document.getElementById('mdrawer');d.classList.remo
     <h2 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--ch);margin-bottom:6px">Send us a message</h2>
     <p style="font-size:14px;font-weight:300;color:var(--mid);margin-bottom:32px">Fill in the form and we'll get back to you as soon as possible.</p>
     <div id="formContent">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
+
+      <!-- Netlify hidden fields -->
+      <input type="hidden" name="form-name" value="contact">
+      <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px">
-        <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px">Your Name</label><input type="text" id="cname" placeholder="Jane Smith" style="width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none"></div>
-        <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px">Phone</label><input type="tel" placeholder="07 xxxx xxxx" style="width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none"></div>
+        <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px">Your Name *</label><input type="text" name="name" id="cname" placeholder="Jane Smith" required style="width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none;transition:border-color .2s"></div>
+        <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px">Phone Number</label><input type="tel" name="phone" placeholder="07 xxxx xxxx" style="width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none;transition:border-color .2s"></div>
       </div>
-      <div style="margin-bottom:18px"><label style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px">Email</label><input type="email" placeholder="you@example.com" style="width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none"></div>
+
+      <div style="margin-bottom:18px"><label style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px">Email Address *</label><input type="email" name="email" placeholder="you@example.com" required style="width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none;transition:border-color .2s"></div>
+
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px">
-        <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px">Pet's Name</label><input type="text" placeholder="Buddy" style="width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none"></div>
-        <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px">Type of Pet</label><select style="width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none;-webkit-appearance:none"><option value="">Select...</option><option>Dog</option><option>Cat</option><option>Bird</option><option>Guinea Pig</option><option>Snake</option><option>Other</option></select></div>
+        <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px">Pet's Name</label><input type="text" name="pet-name" placeholder="Buddy" style="width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none;transition:border-color .2s"></div>
+        <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px">Type of Pet</label>
+          <select name="pet-type" style="width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none;-webkit-appearance:none;transition:border-color .2s">
+            <option value="">Select...</option>
+            <option>Dog</option><option>Cat</option><option>Bird</option>
+            <option>Guinea Pig</option><option>Snake</option><option>Other</option>
+          </select>
+        </div>
       </div>
-      <div style="margin-bottom:18px"><label style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px">Reason for Visit</label><select style="width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none;-webkit-appearance:none"><option value="">Select...</option><option>General Health Check</option><option>Vaccination</option><option>Dental Check</option><option>Grooming</option><option>Surgical Consultation</option><option>After-Hours / Emergency</option><option>Other</option></select></div>
-      <div style="margin-bottom:24px"><label style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px">Additional Information</label><textarea placeholder="Tell us anything else we should know..." style="width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none;resize:vertical;min-height:120px"></textarea></div>
-      <button onclick="submitForm()" style="width:100%;background:var(--sage);color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;padding:15px;border:none;border-radius:100px;cursor:pointer">Send Message</button>
-      <p style="font-size:12px;font-weight:300;color:var(--lt);text-align:center;margin-top:14px;line-height:1.5">We typically respond within one business day. For urgent matters call 07 4946 1631 directly.</p>
+
+      <div style="margin-bottom:18px"><label style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px">Reason for Visit</label>
+        <select name="reason" style="width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none;-webkit-appearance:none;transition:border-color .2s">
+          <option value="">Select...</option>
+          <option>General Health Check</option>
+          <option>Vaccination</option>
+          <option>Dental Check</option>
+          <option>Grooming</option>
+          <option>Surgical Consultation</option>
+          <option>After-Hours / Emergency</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div style="margin-bottom:18px"><label style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px">Additional Information</label>
+        <textarea name="message" placeholder="Tell us anything else we should know about your pet or your visit..." style="width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none;resize:vertical;min-height:120px;transition:border-color .2s"></textarea>
+      </div>
+
+      <button type="submit" style="width:100%;background:var(--sage);color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;padding:15px;border:none;border-radius:100px;cursor:pointer;transition:background .2s">Send Message</button>
+      <p style="font-size:12px;font-weight:300;color:var(--lt);text-align:center;margin-top:14px;line-height:1.5">We typically respond within one business day. For urgent matters call <a href="tel:0749461631" style="color:var(--sage)">07 4946 1631</a> directly.</p>
+
+    </form>
     </div>
     <div id="formSuccess" style="display:none;text-align:center;padding:32px 0">
       <div style="width:64px;height:64px;background:var(--lilacp);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--lilacd);margin:0 auto 16px"><span class="icon" style="width:32px;height:32px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span></div>
@@ -186,12 +218,14 @@ function closeDrawer(){var d=document.getElementById('mdrawer');d.classList.remo
 </div>
 
 <script>
-function submitForm(){
-  var n=document.getElementById('cname').value;
-  if(!n.trim()){alert('Please enter your name.');return;}
-  document.getElementById('formContent').style.display='none';
-  document.getElementById('formSuccess').style.display='block';
-}
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  // Let Netlify handle the actual POST submission
+  // Show success state after a brief delay for UX
+  setTimeout(function() {
+    document.getElementById('formContent').style.display='none';
+    document.getElementById('formSuccess').style.display='block';
+  }, 800);
+});
 </script><footer>
   <div class="fgrid">
     <div>
@@ -199,7 +233,7 @@ function submitForm(){
         <img src="../images/logo-icon.png" alt="Airlie Beach Veterinary Surgery" style="width:38px;height:38px;object-fit:contain">
         <span class="fbrand">Airlie Beach Veterinary Surgery</span>
       </div>
-      <p class="fdesc">Modern, professional and affordable health care for your pets. Serving Cannonvale and the Whitsundays for over 30 years. Open 7 days with after-hours service.</p>
+      <p class="fdesc">Serving you and those you love — professional, affordable veterinary care for the Whitsundays community. Open 7 days with after-hours service.</p>
     </div>
     <div><div class="fhd">Services</div><ul class="flinks"><li><a href="../services/#healthcare">Healthcare</a></li><li><a href="../services/#surgical">Surgical</a></li><li><a href="../services/#wellbeing">Wellbeing</a></li><li><a href="../services/#surgical">Emergency</a></li></ul></div>
     <div><div class="fhd">Navigate</div><ul class="flinks"><li><a href="../">Home</a></li><li><a href="../about/">About Us</a></li><li><a href="../team/">Our Team</a></li><li><a href="../services/">Services</a></li><li><a href="../contact/">Contact</a></li></ul></div>
