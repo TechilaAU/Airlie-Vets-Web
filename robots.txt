@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://www.airliebeachveterinarysurgery.com.au/sitemap.xml
-
-# Disallow 404
 Disallow: /404.html
