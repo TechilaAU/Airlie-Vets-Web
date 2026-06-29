@@ -336,7 +336,7 @@ h1.hh em { font-style: italic; color: var(--sage); }
 .tc { background: var(--crm); border-radius: 20px; overflow: hidden; border: 1px solid rgba(0,0,0,.05); transition: transform .22s, box-shadow .22s, border-color .22s; }
 .team-sec:nth-child(even) .tc { background: #fff; }
 .tc:hover { transform: translateY(-5px); box-shadow: 0 16px 48px rgba(0,0,0,.09); border-color: rgba(120,60,144,.2); }
-.tc-photo { height: 300px; position: relative; overflow: hidden; background: var(--sagp); }
+.tc-photo { height: 340px; position: relative; overflow: hidden; background: var(--sagp); }
 .tc-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; transition: transform .4s; }
 .tc:hover .tc-photo img { transform: scale(1.04); }
 .tc-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; background: linear-gradient(135deg,var(--sagp) 0%,var(--lilacp) 100%); }
