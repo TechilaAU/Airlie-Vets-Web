@@ -332,7 +332,7 @@ h1.hh em { font-style: italic; color: var(--sage); }
 .sec-div    { width: 48px; height: 3px; background: linear-gradient(90deg,var(--orchid),var(--lilacd)); border-radius: 2px; margin: 12px 0 36px; }
 .team-grid  { display: grid; gap: 24px; }
 .team-grid.vets   { grid-template-columns: repeat(4,1fr); }
-.team-grid.nurses { grid-template-columns: repeat(3,1fr); }
+.team-grid.nurses { grid-template-columns: repeat(4,1fr); }
 .tc { background: var(--crm); border-radius: 20px; overflow: hidden; border: 1px solid rgba(0,0,0,.05); transition: transform .22s, box-shadow .22s, border-color .22s; }
 .team-sec:nth-child(even) .tc { background: #fff; }
 .tc:hover { transform: translateY(-5px); box-shadow: 0 16px 48px rgba(0,0,0,.09); border-color: rgba(120,60,144,.2); }
