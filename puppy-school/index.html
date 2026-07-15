@@ -46,25 +46,25 @@
     {
       "@type": "CourseInstance",
       "courseMode": "Onsite",
-      "startDate": "2026-08-03",
+      "startDate": "2026-08-19",
       "location": { "@type": "Place", "name": "Airlie Beach Veterinary Surgery", "address": "58 Shute Harbour Road, Cannonvale QLD 4802" }
     },
     {
       "@type": "CourseInstance",
       "courseMode": "Onsite",
-      "startDate": "2026-09-07",
+      "startDate": "2026-09-16",
       "location": { "@type": "Place", "name": "Airlie Beach Veterinary Surgery", "address": "58 Shute Harbour Road, Cannonvale QLD 4802" }
     },
     {
       "@type": "CourseInstance",
       "courseMode": "Onsite",
-      "startDate": "2026-10-05",
+      "startDate": "2026-10-14",
       "location": { "@type": "Place", "name": "Airlie Beach Veterinary Surgery", "address": "58 Shute Harbour Road, Cannonvale QLD 4802" }
     },
     {
       "@type": "CourseInstance",
       "courseMode": "Onsite",
-      "startDate": "2026-11-02",
+      "startDate": "2026-11-11",
       "location": { "@type": "Place", "name": "Airlie Beach Veterinary Surgery", "address": "58 Shute Harbour Road, Cannonvale QLD 4802" }
     }
   ]
@@ -257,28 +257,28 @@ function closeDrawer(){var d=document.getElementById('mdrawer');d.classList.remo
   <div class="pp-igrid">
     <div class="pp-icard">
       <div class="pp-idate">
-        <div class="pp-ical"><div class="m">Aug</div><div class="d">3</div></div>
+        <div class="pp-ical"><div class="m">Aug</div><div class="d">19</div></div>
         <div><div class="pp-iwhen">Wednesday 19 August 2026</div><div class="pp-imeta">6:00 – 7:00pm · 4 weekly sessions</div></div>
       </div>
       <span class="pp-status pp-open">Enrolling now</span>
     </div>
     <div class="pp-icard">
       <div class="pp-idate">
-        <div class="pp-ical"><div class="m">Sep</div><div class="d">7</div></div>
+        <div class="pp-ical"><div class="m">Sep</div><div class="d">16</div></div>
         <div><div class="pp-iwhen">Wednesday 16 September 2026</div><div class="pp-imeta">6:00 – 7:00pm · 4 weekly sessions</div></div>
       </div>
       <span class="pp-status pp-open">Enrolling now</span>
     </div>
     <div class="pp-icard">
       <div class="pp-idate">
-        <div class="pp-ical"><div class="m">Oct</div><div class="d">5</div></div>
+        <div class="pp-ical"><div class="m">Oct</div><div class="d">14</div></div>
         <div><div class="pp-iwhen">Wednesday 14 October 2026</div><div class="pp-imeta">6:00 – 7:00pm · 4 weekly sessions</div></div>
       </div>
       <span class="pp-status pp-soon">Opening soon</span>
     </div>
     <div class="pp-icard">
       <div class="pp-idate">
-        <div class="pp-ical"><div class="m">Nov</div><div class="d">2</div></div>
+        <div class="pp-ical"><div class="m">Nov</div><div class="d">11</div></div>
         <div><div class="pp-iwhen">Wednesday 11 November 2026</div><div class="pp-imeta">6:00 – 7:00pm · 4 weekly sessions</div></div>
       </div>
       <span class="pp-status pp-soon">Opening soon</span>
@@ -286,7 +286,91 @@ function closeDrawer(){var d=document.getElementById('mdrawer');d.classList.remo
   </div>
   <!-- INTAKES:END -->
   <p class="pp-inote">New puppy but can't see a date that suits? Get in touch and we'll let you know as soon as the next intake opens.</p>
+  <div style="text-align:center;margin-top:20px"><a href="#register" class="btnp"><span class="icon" style="width:16px;height:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg></span> Register your interest</a></div>
 </section>
+
+<section id="register" style="max-width:760px;margin:64px auto 0;padding:0 24px">
+  <div style="text-align:center;margin-bottom:28px">
+    <div class="slbl" style="color:var(--lilacd)">Get Started</div>
+    <h2 class="stitle" style="margin:6px 0 6px">Register your interest</h2>
+    <p style="color:var(--mid);max-width:560px;margin:0 auto">Tell us a little about your puppy and we'll be in touch about the next available intake. No obligation.</p>
+  </div>
+  <div style="background:#fff;border-radius:24px;padding:40px;box-shadow:0 4px 40px rgba(0,0,0,.06)">
+    <div id="ppFormContent">
+      <form name="puppy-school-interest" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="ppInterestForm">
+
+      <!-- Netlify hidden fields -->
+      <input type="hidden" name="form-name" value="puppy-school-interest">
+      <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px">
+        <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px">Your Name *</label><input type="text" name="owner-name" placeholder="Jane Smith" required style="width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none;transition:border-color .2s"></div>
+        <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px">Phone Number *</label><input type="tel" name="phone" placeholder="07 xxxx xxxx" required style="width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none;transition:border-color .2s"></div>
+      </div>
+
+      <div style="margin-bottom:18px"><label style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px">Email Address *</label><input type="email" name="email" placeholder="you@example.com" required style="width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none;transition:border-color .2s"></div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px">
+        <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px">Puppy's Name</label><input type="text" name="puppy-name" placeholder="Biscuit" style="width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none;transition:border-color .2s"></div>
+        <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px">Puppy's Age (weeks)</label><input type="number" name="puppy-age-weeks" min="0" max="52" placeholder="e.g. 10" style="width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none;transition:border-color .2s"></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px">
+        <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px">Breed</label><input type="text" name="puppy-breed" placeholder="e.g. Kelpie x" style="width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none;transition:border-color .2s"></div>
+        <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px">Had First Vaccination?</label>
+          <select name="first-vaccination" style="width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none;transition:border-color .2s;-webkit-appearance:none">
+            <option value="">Select...</option>
+            <option>Yes</option>
+            <option>Not yet</option>
+            <option>Not sure</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="margin-bottom:18px"><label style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px">Preferred Intake</label>
+        <select name="preferred-intake" style="width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none;transition:border-color .2s;-webkit-appearance:none">
+          <option value="">Earliest available</option>
+          <option>Wednesday 19 August 2026</option>
+          <option>Wednesday 16 September 2026</option>
+          <option>Wednesday 14 October 2026</option>
+          <option>Wednesday 11 November 2026</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+
+      <div style="margin-bottom:18px"><label style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);margin-bottom:8px">Anything Else?</label>
+        <textarea name="message" placeholder="Tell us anything else about your puppy or any questions you have..." style="width:100%;background:var(--crm);border:1.5px solid transparent;border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:300;color:var(--ch);outline:none;transition:border-color .2s;resize:vertical;min-height:110px"></textarea>
+      </div>
+
+      <button type="submit" style="width:100%;background:var(--sage);color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;padding:15px;border:none;border-radius:100px;cursor:pointer;transition:background .2s">Register My Interest</button>
+      <p style="font-size:12px;font-weight:300;color:var(--lt);text-align:center;margin-top:14px;line-height:1.5">We'll be in touch about upcoming intakes. For anything urgent, call <a href="tel:0749461631" style="color:var(--sage)">07 4946 1631</a>.</p>
+
+      </form>
+    </div>
+    <div id="ppFormSuccess" style="display:none;text-align:center;padding:32px 0">
+      <div style="width:64px;height:64px;background:var(--lilacp);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--lilacd);margin:0 auto 16px"><span class="icon" style="width:32px;height:32px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span></div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--ch);margin-bottom:8px">You're on the list!</h3>
+      <p style="font-size:14.5px;font-weight:300;color:var(--mid)">Thanks — we'll be in touch about the next puppy school intake. For anything urgent call <a href="tel:0749461631" style="color:var(--sage);font-weight:500">07 4946 1631</a>.</p>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var f=document.getElementById('ppInterestForm');
+  if(!f) return;
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var body=new URLSearchParams(new FormData(f)).toString();
+    var done=function(){
+      document.getElementById('ppFormContent').style.display='none';
+      var s=document.getElementById('ppFormSuccess');
+      s.style.display='block';
+      s.scrollIntoView({behavior:'smooth',block:'center'});
+    };
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body}).then(done).catch(done);
+  });
+})();
+</script>
 
 <div class="cta-sage">
   <h2>Ready to enrol your puppy?</h2>
