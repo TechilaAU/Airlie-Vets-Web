@@ -207,8 +207,8 @@ h1.hh em { font-style: italic; color: var(--sage); }
 .ahbl   { display: flex; align-items: center; gap: 14px; }
 .ahico  { width: 44px; height: 44px; min-width: 44px; background: rgba(255,255,255,.12); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #fff; }
 .ahico .icon { width: 22px; height: 22px; }
-.ahtitle { font-size: 14px; font-weight: 500; color: #fff; margin-bottom: 2px; }
-.ahsub   { font-size: 12.5px; font-weight: 300; color: rgba(255,255,255,.7); }
+.ahtitle { font-size: 16px; font-weight: 500; color: #fff; margin-bottom: 2px; }
+.ahsub   { font-size: 14px; font-weight: 300; color: rgba(255,255,255,.7); }
 .ahbadge { background: rgba(255,255,255,.15); color: #fff; font-size: 12px; font-weight: 500; padding: 8px 18px; border-radius: 100px; border: 1px solid rgba(255,255,255,.25); white-space: nowrap; display: flex; align-items: center; gap: 7px; text-decoration: none; }
 .ahbadge .icon { width: 14px; height: 14px; }
 
