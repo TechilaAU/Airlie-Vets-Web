@@ -467,3 +467,20 @@ h1.h404 em { font-style: italic; color: var(--sagl); }
   .dogfloat { display: none; }
   .vals-strip { grid-template-columns: 1fr 1fr; padding: 36px 5%; }
 }
+
+
+/* ---- Team bios: clamp + Read-full-bio modal ---- */
+.tc-bio { --tc-lines:7; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:var(--tc-lines); line-clamp:var(--tc-lines); overflow:hidden; }
+.tc-more { display:inline-flex; align-items:center; gap:6px; margin-top:12px; padding:0; background:none; border:0; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500; color:var(--lilacd); cursor:pointer; transition:gap .18s, opacity .18s; }
+.tc-more:hover { gap:9px; opacity:.82; }
+
+.tmodal { display:none; position:fixed; inset:0; z-index:1000; background:rgba(28,58,74,.55); backdrop-filter:blur(3px); -webkit-backdrop-filter:blur(3px); align-items:center; justify-content:center; padding:24px; }
+.tmodal.open { display:flex; }
+.tmodal-panel { position:relative; background:#fff; border-radius:22px; max-width:620px; width:100%; max-height:86vh; overflow-y:auto; padding:44px 46px; box-shadow:0 40px 90px -30px rgba(28,58,74,.5); animation:tmIn .22s ease; }
+@keyframes tmIn { from{ opacity:0; transform:translateY(14px); } to{ opacity:1; transform:none; } }
+.tmodal-close { position:absolute; top:16px; right:16px; width:40px; height:40px; border:0; border-radius:50%; background:var(--crm); color:var(--ch); display:flex; align-items:center; justify-content:center; cursor:pointer; transition:background .18s; }
+.tmodal-close:hover { background:var(--sagp); }
+.tmodal-name { font-family:'Playfair Display',serif; font-size:clamp(24px,3vw,30px); font-weight:700; color:var(--ch); padding-right:40px; }
+.tmodal-cred { font-size:12px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--lilacd); margin-top:6px; }
+.tmodal-bio { margin-top:20px; font-size:15px; font-weight:300; line-height:1.8; color:var(--mid); }
+@media(max-width:560px){ .tmodal-panel{ padding:36px 26px; border-radius:18px; } .tmodal{ padding:14px; } }
